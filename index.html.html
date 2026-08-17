@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>دليل الاستعداد لاستقبال العام الدراسي 1448هـ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4EEDC;
+    --paper-deep:#EBE0C4;
+    --card:#FFFDF7;
+    --ink:#232A1E;
+    --ink-soft:#5E6150;
+    --ink-faint:#8B8A73;
+    --pine:#1E4B3D;
+    --pine-deep:#122F25;
+    --gold:#AD7C34;
+    --gold-soft:#E6D5AC;
+    --sage:#5F7F52;
+    --sage-soft:#DCE6D2;
+    --teal:#33606C;
+    --teal-soft:#D6E3E5;
+    --rust:#A15530;
+    --rust-soft:#EEDACB;
+    --line:#DCCE9F;
+    --shadow: 0 24px 55px -24px rgba(18,30,20,.45);
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 700px at 15% -10%, #FBF6E8 0%, transparent 60%),
+      radial-gradient(1000px 800px at 110% 110%, #EFE4C6 0%, transparent 55%),
+      var(--paper);
+    color:var(--ink);
+    font-family:'Almarai', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100%;
+  }
+  h1,h2,h3,.disp{font-family:'Cairo', sans-serif;}
+
+  .app{
+    max-width:1180px;
+    margin:0 auto;
+    padding:18px 16px 90px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ---- Top bar ---- */
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:6px 4px 16px;
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brandmark .seal{
+    width:38px;height:38px;border-radius:50%;
+    background:linear-gradient(145deg,var(--pine),var(--pine-deep));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:inset 0 0 0 2px rgba(255,255,255,.15);
+    flex-shrink:0;
+  }
+  .brandmark .seal svg{width:19px;height:19px;}
+  .brandmark .txt{line-height:1.2;}
+  .brandmark .txt b{font-family:'Cairo';font-size:14.5px;font-weight:800;color:var(--pine-deep);display:block;}
+  .brandmark .txt span{font-size:11.5px;color:var(--ink-faint);}
+
+  .tocbtn{
+    display:flex;align-items:center;gap:7px;
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--pine-deep);
+    font-family:'Cairo';font-weight:700;font-size:13px;
+    padding:9px 15px;border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 6px 16px -8px rgba(20,30,20,.25);
+  }
+  .tocbtn:active{transform:scale(.97);}
+  .tocbtn svg{width:15px;height:15px;}
+
+  /* ---- Chapter tab strip ---- */
+  .tabstrip{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:2px 2px 14px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .tabstrip::-webkit-scrollbar{display:none;}
+  .tab{
+    flex:0 0 auto;
+    display:flex;align-items:center;gap:7px;
+    padding:9px 14px;
+    border-radius:999px;
+    font-family:'Cairo';font-weight:700;font-size:12.5px;
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    cursor:pointer;
+    white-space:nowrap;
+    transition:all .25s ease;
+  }
+  .tab .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .tab.active{
+    color:#fff;
+    border-color:transparent;
+    box-shadow:var(--shadow);
+    transform:translateY(-2px);
+  }
+  .tab.active .dot{background:#fff;}
+
+  /* ---- Book stage ---- */
+  .stage{position:relative;flex:1;}
+  .book{
+    position:relative;
+    background:var(--card);
+    border-radius:22px;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    min-height:62vh;
+    overflow:hidden;
+  }
+  .book::before{
+    content:"";
+    position:absolute; inset:0 auto 0 0;
+    width:10px;
+    background:linear-gradient(90deg, rgba(18,30,20,.10), transparent);
+  }
+  .page{
+    padding:34px 30px 30px;
+    animation:pagein .35s ease;
+  }
+  @keyframes pagein{
+    from{opacity:0; transform:translateY(8px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  @media(min-width:640px){ .page{padding:44px 52px 42px;} }
+
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Cairo';font-weight:800;font-size:11.5px;
+    letter-spacing:.02em;
+    padding:5px 13px;border-radius:999px;
+    margin-bottom:14px;
+  }
+  .ctitle{font-size:23px;font-weight:800;color:var(--pine-deep);margin:0 0 6px;line-height:1.35;}
+  @media(min-width:640px){ .ctitle{font-size:28px;} }
+  .csub{color:var(--ink-soft);font-size:14px;margin:0 0 26px;line-height:1.7;}
+
+  hr.rule{border:none;border-top:1px dashed var(--line);margin:22px 0;}
+
+  /* ---- checklist items ---- */
+  .items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+  .item{
+    display:flex;align-items:flex-start;gap:11px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:11px 13px;
+    font-size:14px;
+    line-height:1.8;
+    color:var(--ink);
+  }
+  .item .num{
+    flex-shrink:0;
+    font-family:'Cairo';font-weight:800;font-size:11px;
+    color:#fff;
+    width:22px;height:22px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin-top:2px;
+  }
+  .item .chk{
+    flex-shrink:0;
+    width:20px;height:20px;border-radius:6px;
+    display:flex;align-items:center;justify-content:center;
+    margin-top:2px;
+    background:var(--sage-soft);
+  }
+  .item .chk svg{width:12px;height:12px;stroke:var(--sage);}
+
+  .group{margin-bottom:22px;}
+  .group:last-child{margin-bottom:0;}
+  .grouphead{
+    display:flex;align-items:center;gap:9px;
+    margin-bottom:11px;
+  }
+  .grouphead .bar{width:5px;height:18px;border-radius:3px;}
+  .grouphead h3{font-size:15.5px;margin:0;color:var(--pine-deep);}
+  .grouphead .count{
+    font-family:'Cairo';font-size:11px;font-weight:700;
+    color:var(--ink-faint);
+    background:var(--paper-deep);
+    padding:2px 9px;border-radius:999px;
+  }
+
+  /* ---- committee cards ---- */
+  .cwrap{display:flex;flex-direction:column;gap:16px;}
+  .ccard{
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:var(--paper);
+  }
+  .chead{
+    padding:13px 16px;
+    background:linear-gradient(120deg, var(--rust), #8C4523);
+    color:#fff;
+  }
+  .chead h4{margin:0;font-size:15.5px;}
+  .cbody{padding:14px 16px 16px;}
+  .cdesc{font-size:13.5px;line-height:1.85;color:var(--ink-soft);margin:0 0 12px;}
+  .members{display:flex;flex-wrap:wrap;gap:8px;}
+  .member{
+    display:flex;align-items:center;gap:7px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 12px 6px 6px;
+    font-size:12.5px;
+  }
+  .member .av{
+    width:22px;height:22px;border-radius:50%;
+    background:var(--pine);
+    color:#fff;font-family:'Cairo';font-weight:800;font-size:10.5px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .member b{font-weight:700;color:var(--ink);}
+  .member .role{color:var(--ink-faint);font-size:11px;}
+
+  /* ---- cover ---- */
+  .cover{padding:0;}
+  .cover-top{
+    background:
+      radial-gradient(600px 300px at 20% 0%, rgba(255,255,255,.08), transparent),
+      linear-gradient(155deg, var(--pine) 0%, var(--pine-deep) 100%);
+    color:#F5EFDA;
+    padding:40px 28px 34px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .cover-top::after{
+    content:"";position:absolute;inset:0;
+    background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.035) 0 2px, transparent 2px 14px);
+  }
+  .cover-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    padding:7px 16px;border-radius:999px;
+    font-size:12px;font-weight:700;font-family:'Cairo';
+    position:relative;z-index:1;
+  }
+  .cover-title{
+    font-size:26px;font-weight:900;margin:20px 0 8px;position:relative;z-index:1;
+  }
+  @media(min-width:640px){.cover-title{font-size:34px;}}
+  .cover-sub{
+    font-size:14.5px;opacity:.85;max-width:520px;margin:0 auto;position:relative;z-index:1;line-height:1.8;
+  }
+  .cover-school{
+    font-family:'Cairo';font-weight:800;font-size:17px;margin-top:22px;position:relative;z-index:1;
+    color:#fff;
+  }
+  .cover-year{
+    display:inline-block;margin-top:10px;
+    font-family:'Cairo';font-weight:800;font-size:13px;
+    background:var(--gold); color:#2B1C06;
+    padding:5px 18px;border-radius:999px;position:relative;z-index:1;
+  }
+  .cover-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+    padding:20px 20px 6px;
+    margin-top:-26px;position:relative;z-index:2;
+  }
+  .stat{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px 8px;
+    text-align:center;
+    box-shadow:0 14px 30px -18px rgba(20,30,20,.4);
+  }
+  .stat b{display:block;font-family:'Cairo';font-size:21px;font-weight:800;color:var(--pine-deep);}
+  .stat span{font-size:11px;color:var(--ink-faint);}
+  .cover-info{
+    padding:22px 26px 30px;
+  }
+  .info-grid{
+    display:grid;grid-template-columns:1fr;gap:10px;
+  }
+  @media(min-width:560px){ .info-grid{grid-template-columns:1fr 1fr;} }
+  .info-row{
+    display:flex;justify-content:space-between;gap:10px;
+    border-bottom:1px dashed var(--line);
+    padding:8px 2px;
+    font-size:13px;
+  }
+  .info-row .k{color:var(--ink-faint);}
+  .info-row .v{font-weight:700;color:var(--ink);}
+  .info-row .v.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;}
+  .cover-credit{
+    margin-top:22px;
+    text-align:center;
+    padding-top:18px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--ink-faint);
+  }
+  .cover-credit b{color:var(--pine-deep);}
+
+  /* ---- toc ---- */
+  .toc-list{display:flex;flex-direction:column;gap:10px;}
+  .toc-item{
+    display:flex;align-items:center;gap:13px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:13px;
+    padding:13px 15px;
+    cursor:pointer;
+  }
+  .toc-item .n{
+    font-family:'Cairo';font-weight:800;font-size:13px;color:#fff;
+    width:30px;height:30px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .toc-item .t{flex:1;}
+  .toc-item .t b{display:block;font-size:14px;color:var(--ink);}
+  .toc-item .t span{font-size:11.5px;color:var(--ink-faint);}
+  .toc-item .arrow{color:var(--ink-faint);}
+
+  /* ---- footer controls ---- */
+  .controls{
+    position:sticky; bottom:14px;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:10px;
+    margin-top:16px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 10px;
+    box-shadow:var(--shadow);
+  }
+  .navbtn{
+    display:flex;align-items:center;gap:6px;
+    background:var(--pine-deep);color:#fff;
+    border:none;border-radius:999px;
+    padding:10px 18px;
+    font-family:'Cairo';font-weight:700;font-size:13px;
+    cursor:pointer;
+  }
+  .navbtn:disabled{opacity:.35;cursor:default;}
+  .navbtn svg{width:14px;height:14px;}
+  .pageinfo{font-family:'Cairo';font-size:12px;color:var(--ink-faint);font-weight:700;}
+
+  /* ---- drawer (mobile TOC overlay) ---- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(20,25,18,.45);
+    opacity:0;pointer-events:none;transition:opacity .25s ease;
+    z-index:40;
+  }
+  .overlay.show{opacity:1;pointer-events:auto;}
+  .drawer{
+    position:fixed; top:0; right:0; height:100%;
+    width:min(360px, 88vw);
+    background:var(--paper);
+    box-shadow:-20px 0 40px -20px rgba(0,0,0,.4);
+    transform:translateX(100%);
+    transition:transform .3s ease;
+    z-index:41;
+    padding:22px 18px;
+    overflow-y:auto;
+  }
+  .drawer.show{transform:translateX(0);}
+  .drawer h3{font-size:16px;margin:0 0 16px;color:var(--pine-deep);}
+  .drawer .close{
+    float:left;background:none;border:none;font-size:20px;color:var(--ink-faint);cursor:pointer;
+  }
+
+  ::selection{background:var(--gold-soft);}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <div class="topbar">
+    <div class="brandmark">
+      <div class="seal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F4EEDC" stroke-width="1.8"><path d="M4 19.5V5a2 2 0 0 1 2-2h10.5A1.5 1.5 0 0 1 18 4.5V21l-3-1.5L12 21l-3-1.5L6 21l-2-1V19.5Z"/><path d="M8 7h6M8 10.5h6"/></svg>
+      </div>
+      <div class="txt">
+        <b>دليل الاستعداد</b>
+        <span>العام الدراسي 1448هـ</span>
+      </div>
+    </div>
+    <button class="tocbtn" onclick="openDrawer()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      الفهرس
+    </button>
+  </div>
+
+  <div class="tabstrip" id="tabstrip"></div>
+
+  <div class="stage">
+    <div class="book">
+      <div id="pageContent"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="navbtn" id="prevBtn" onclick="go(-1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l6 6-6 6"/></svg>
+      السابق
+    </button>
+    <span class="pageinfo" id="pageinfo"></span>
+    <button class="navbtn" id="nextBtn" onclick="go(1)">
+      التالي
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+  </div>
+
+</div>
+
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <button class="close" onclick="closeDrawer()">×</button>
+  <h3>فهرس الدليل</h3>
+  <div class="toc-list" id="drawerList"></div>
+</div>
+
+<script>
+/* ============ DATA ============ */
+const SCHOOL = {
+  name: "الابتدائية الثانية والثمانون للطفولة المبكرة",
+  admin: "إدارة تعليم المدينة المنورة",
+  ministryNo: "41706",
+  principal: "مي أحمد خراز",
+  principalId: "1021937717",
+  principalPhone: "0505328042",
+  email: "41706@mg.moe.gov.sa",
+  students: 286,
+  admins: 8,
+  teachers: 26,
+  preparedBy: "أريج العجلان",
+  preparedByRole: "مساعد إداري",
+  year: "1448هـ"
+};
+
+const COLORS = {
+  pine:  {main:"#1E4B3D", soft:"#D9E5DD"},
+  gold:  {main:"#AD7C34", soft:"#E6D5AC"},
+  sage:  {main:"#5F7F52", soft:"#DCE6D2"},
+  teal:  {main:"#33606C", soft:"#D6E3E5"},
+  rust:  {main:"#A15530", soft:"#EEDACB"}
+};
+
+const CH_PRE = {
+  key:"pre", title:"مهام فترة الاستعداد قبل الدراسة",
+  short:"قبل الدراسة",
+  sub:"أسبوع الاستعداد — الجهة المسؤولة: الإدارة المدرسية",
+  color:"gold",
+  items:[
+    "الاطلاع على لوائح وأنظمة السياسة العامة للتعليم في المملكة العربية السعودية، والقواعد التنظيمية للائحة تقويم الطالبة وتفسيراتها، ودليل مديرة المدرسة، ولائحة تقويم الأداء الوظيفي، ولائحة السلوك والمواظبة، ولائحة الإجازات، ودليل القبول والتسجيل، والدليل التنظيمي والإجرائي.",
+    "تزويد المعلمات بالتعليمات العامة وتعليمات المواد حسب التخصص مع بداية العام الدراسي، وبالأدلة المنظمة للعمل واللوائح والتعاميم الهامة والوصف الوظيفي.",
+    "تحديد أهداف الخطة وآلية التنفيذ.",
+    "إعداد برنامج استقبال الطالبات.",
+    "إعداد برنامج التهيئة للصف الرابع.",
+    "إعداد الجدول المدرسي وتوزيع أنصبة المواد على المعلمات، ونشر الجداول في نظام نور ومنصة مدرستي.",
+    "تحديد المهام المدرسية ضمن لجان تنفيذية، وتوزيع العمل الإداري والفني على الوكيلات والإداريات والمراقِبات، وتحديد فرق ولجان العمل.",
+    "توزيع حصص الانتظار على المعلمات اللواتي يقل نصابهن عن النصاب المقرر من الوزارة (24 حصة)، ثم توزيع الباقي بالتساوي بين المعلمات اللواتي استوفين أنصبتهن.",
+    "التأكيد على أن النشاط المدرسي ليس وسيلة لقضاء وقت الفراغ، بل وسيلة لتنمية قدرات الطالبات الابتكارية ومهاراتهن وتعزيز اتجاهاتهن الإيجابية نحو التعاون وحب العمل.",
+    "تحديد أهداف واضحة عند عقد الاجتماعات وتنفيذ الزيارات واللقاءات لتحقيق أفضل نتيجة بأقل جهد وأسرع وقت، وتنظيم العمل المدرسي بحيث لا تقل مدة كل فصل دراسي عن (13) أسبوعًا أو حسب ما تحدده الوزارة.",
+    "قبول الطالبات غير السعوديات وفق التوجيهات وبعد معادلة شهاداتهن.",
+    "معاملة طالبات دول مجلس التعاون الخليجي، أو من أم سعودية وأب غير سعودي، معاملة الطالبات السعوديات.",
+    "رفع مباشرة الهيئة الإدارية والتعليمية وحالات الانقطاع.",
+    "عقد اجتماع اللجنة الإدارية.",
+    "عقد الاجتماع بالهيئة التعليمية.",
+    "تشكيل لجنة التوجيه والإرشاد.",
+    "استقبال المعلمات الجدد، وتعريفهن بالمدرسة وإمكاناتها وطبيعة العمل، وتوزيع اللوائح والأنظمة وخطة المدرسة الاستراتيجية عليهن.",
+    "الرفع لاستكمال الهيئة الإدارية والتعليمية في حال وجود عجز."
+  ]
+};
+
+const CH_WEEK1 = {
+  key:"week1", title:"مهام الأسبوع الأول من الدراسة",
+  short:"الأسبوع الأول",
+  sub:"مهام موزّعة حسب الجهة المسؤولة عن التنفيذ",
+  color:"sage",
+  groups:[
+    { label:"الإدارة المدرسية", items:[
+      "الحضور المبكر للمدرسة.",
+      "الإشراف على الطابور الصباحي ومتابعة الطالبات.",
+      "التأكد من قيام الطابور الصباحي على الوجه المطلوب من قبل الموجهة الطلابية ورائدة النشاط والمعلمات، والتأكد من البرنامج الإذاعي بما يشمل برنامجًا ترحيبيًا.",
+      "الإشراف على توجه جميع الطالبات إلى فصولهن مع نهاية الطابور وقبل بداية الحصة الأولى، لتتمكن المعلمة من دخول الصف مع بداية الحصة مباشرة.",
+      "المتابعة المستمرة مع المساعدة الإدارية لشؤون الطالبات والموجهة الطلابية للطالبات المتأخرات، ووضع الضوابط المناسبة للحد من التأخر الصباحي.",
+      "انتظام المعلمات في حصصهن.",
+      "متابعة توزيع المقررات الدراسية والخطة الأسبوعية على الطالبات وتزويدهن بالواجبات والتعليمات.",
+      "توزيع الجدول الدراسي على الطالبات.",
+      "متابعة عمل اللجان، وزيارة الفصول الدراسية.",
+      "الاجتماع بالمعلمات (المستجدات، المنقولات، أقل أداء).",
+      "التأكد من كشوف الطالبات ومطابقتها لأعدادهن داخل الفصول.",
+      "حصر المعلمات المتأخرات والغائبات وتسديد حصص الانتظار.",
+      "المرور على فصول المدرسة والإشراف على سير العمل داخلها.",
+      "الاطلاع على تحضير المعلمات.",
+      "ملاحظة مرافق المدرسة والساحات الداخلية والخارجية والمقصف، ومدى كفاءة النظافة فيها.",
+      "استقبال زائرات المدرسة.",
+      "متابعة ما يقدَّم في المقصف المدرسي ومدى مطابقته للشروط ولائحة المقاصف المدرسية.",
+      "التأكد من قيام المناوِبات بدورهن الفعلي خلال الدوام اليومي أثناء دخول وخروج الطالبات، وفي المقصف والساحات.",
+      "فتح البريد الإلكتروني والرد على التعاميم والمعاملات الواردة من إدارة التعليم، مع إطلاع الإداريات والمعلمات كلٌ فيما يخصها.",
+      "التأكد قبل الانصراف من خروج جميع الطالبات من المدرسة.",
+      "دراسة نتائج الفصل الدراسي الثاني من العام الماضي مع الموجهة الطلابية.",
+      "الاجتماع بلجنة التوجيه والإرشاد.",
+      "الاجتماع بالموجهة الطلابية لحصر الطالبات الموهوبات والمتأخرات دراسيًا والمعيدات والمتفوقات وذوات الحالات الصحية والاجتماعية.",
+      "الاجتماع باللجنة الإدارية.",
+      "الاجتماع بالمسؤولة عن تسجيل المعلومات في الحاسب الآلي.",
+      "استكمال قاعدة بيانات المعلمات والطالبات.",
+      "إصدار النشرة الأولى للمعلمات.",
+      "تكريم الطالبات المتفوقات.",
+      "الاجتماع بفريق الصندوق المدرسي.",
+      "جولة تفقدية للمبنى المدرسي.",
+      "متابعة تطبيق خطة إخلاء المبنى المدرسي.",
+      "زيارة المختبر.",
+      "متابعة الصيانة الدورية للمبنى المدرسي.",
+      "الاجتماع برائدات الفصول.",
+      "إعداد جدول زيارات المعلمات.",
+      "الإعلان عن مجالات النشاط.",
+      "تحديث الخطة الاستراتيجية للمدرسة، ووضع الخطط التنفيذية.",
+      "متابعة الأثاث والأجهزة والأدوات والكتب.",
+      "تعريف الطالبات بلوائح ونظام السلوك المدرسي.",
+      "استيفاء بيانات الطالبات اللاتي بحاجة إلى خدمات تعليمية.",
+      "استكمال بيانات الطالبات المنقولات وتحديث بيانات جميع الطالبات.",
+      "استكمال بيانات جميع الموظفات."
+    ]},
+    { label:"التخطيط", items:[
+      "تجهيز الخطة التشغيلية للمدرسة.",
+      "وضع خطة الأنشطة المدرسية."
+    ]},
+    { label:"النظام", items:[
+      "توضيح الأنظمة في المدرسة للمنسوبات، وبخاصة الجديدات منهن، من خلال النشرات والتعاميم والاجتماعات وورش العمل في بداية العام الدراسي.",
+      "متابعة الالتزام الوظيفي للموظفات: الحضور والانصراف، والاستئذان، والغياب.",
+      "وضع برامج التنمية المهنية الهادفة لرفع كفاءة المعلمات وزيادة فاعليتهن، بعد تحديد الاحتياجات، من خلال الدورات التدريبية وورش العمل والعروض التطبيقية وحلقات النقاش والدراسات والبحوث.",
+      "توزيع الأجهزة المتنوعة بشكل عادل بين أفراد المجتمع المدرسي."
+    ]},
+    { label:"الطالبات", items:[
+      "تحليل نتائج الطالبات ومقارنتها بالعام السابق (إحصائيات، مقارنات، تحليل بيانات، حساب القيمة المضافة).",
+      "تفعيل الخطة الإثرائية للطالبات المتفوقات دراسيًا والموهوبات.",
+      "تنفيذ الخطط العلاجية للطالبات ذوات المستوى الضعيف اللاتي تم ترفيعهن.",
+      "متابعة عمل اللجان، وزيارة الفصول الدراسية."
+    ]}
+  ]
+};
+
+const CH_PRIORITIES = {
+  key:"priorities", title:"أولويات مديرة المدرسة في التهيئة والاستقبال",
+  short:"أولويات المديرة",
+  sub:"تهيئة واستقبال العام الدراسي الجديد وأعمال اللجان المنسّقة — موزّعة حسب مجالات العمل",
+  color:"teal",
+  groups:[
+    { label:"المبنى المدرسي", items:[
+      "وجود لوحة المدرسة في مكان بارز وبحالة جيدة.",
+      "تجهيز أدوات الطالبات الأساسية من طاولات وكراسٍ.",
+      "سلامة المرافق المدرسية الداخلية والخارجية وتجهيزها لاستقبال جميع عناصر العملية التعليمية.",
+      "وجود العلم على سارية في مكان بارز وبحالة جيدة.",
+      "متابعة صلاحية اللوحات والمفاتيح والتمديدات الكهربائية.",
+      "متابعة دهان الغرف الصفية والإدارية وغرف النشاط والممرات.",
+      "متابعة صلاحية صنابير المياه وملاءمتها لأعداد الطالبات.",
+      "متابعة صلاحية التمديدات الصحية وسلامتها.",
+      "متابعة صلاحية وملاءمة غرفة الصحة المدرسية.",
+      "الاهتمام بجمال المدرسة وتنسيقها."
+    ]},
+    { label:"النظافة العامة", items:[
+      "متابعة صلاحية الوسائل الأساسية المستخدمة في الموقف التعليمي داخل الفصل الدراسي.",
+      "متابعة المقصف المدرسي وتجهيزه للعمل اليومي.",
+      "متابعة نظافة مرافق المدرسة المختلفة."
+    ]},
+    { label:"الصحة والأمن والسلامة", items:[
+      "متابعة صلاحية طفايات الحريق ووجودها في المكان المناسب.",
+      "متابعة توفر وسائل الإسعافات الأولية وصلاحيتها.",
+      "توفير تعليمات الصحة والأمان ووجودها في المكان المناسب.",
+      "متابعة توفير اللوحات المؤدية إلى مخارج الطوارئ."
+    ]},
+    { label:"الشؤون المالية", items:[
+      "توفر خطة الصرف الموازنة والتقيد بها.",
+      "توفر السجلات المالية وإعدادها للعمل.",
+      "متابعة تجهيز المقصف المدرسي وتزويده بالاحتياجات الضرورية.",
+      "متابعة صلاحية الأثاث والتجهيزات المدرسية والمحافظة عليها.",
+      "التأكد من اكتمال استلام الكتب المدرسية."
+    ]},
+    { label:"الشؤون الإدارية", items:[
+      "التقيد بعرض الصور الرسمية للقيادة في مكان بارز وبحالة جيدة، وفق التعليمات الرسمية.",
+      "جاهزية الخطة الاستراتيجية والتشغيلية وخطة عمل المدرسة.",
+      "وجود السجلات الإدارية المنظمة للعمل المدرسي.",
+      "إعداد قوائم الطالبات وتوزيعها على الفصول الدراسية.",
+      "متابعة عمل البرامج المدرسية الإلكترونية المختلفة.",
+      "تعليق رؤية ورسالة وأهداف وغايات المدرسة في مكان بارز.",
+      "توفير سجلات العمل الخاصة بالمعلمات والإداريات.",
+      "توفير القرطاسية اللازمة للموظفات (إداريات ومعلمات) داخل المدرسة."
+    ]},
+    { label:"الشؤون التعليمية والتربوية والفنية", items:[
+      "توفير الخطط الدراسية للهيئة التدريسية.",
+      "توفير البرامج الإلكترونية المختلفة التي تخدم المنهج الدراسي.",
+      "إخطار المعلمات بخطط المتابعة والإشراف الإداري.",
+      "إعداد الجدول المدرسي بكافة ضوابطه وأنشطته من احتياط ومناوبة وإشراف وزيارات متبادلة.",
+      "تجهيز المدرسة من حيث الموقع الإلكتروني والبريد وأجهزة الاتصال كالهاتف."
+    ]},
+    { label:"الأنشطة المدرسية", items:[
+      "تجهيز المجالس واللجان المختلفة.",
+      "إعداد سجلات لتوثيق المناسبات المختلفة في المدرسة.",
+      "إعداد الخطط والبرامج المختلفة للأنشطة المدرسية.",
+      "تجهيز مكان لممارسة الأنشطة المدرسية.",
+      "إعداد لائحة تُلزم الطالبات بارتداء الزي الرسمي."
+    ]},
+    { label:"نظم المعلومات وتكنولوجيا الاتصال", items:[
+      "توفير خدمات الإنترنت.",
+      "توظيف التكنولوجيا في العمل الإداري.",
+      "متابعة توفير عدد كافٍ من أجهزة العرض المستخدمة في الموقف التعليمي.",
+      "ضرورة المحافظة على الأجهزة والمختبرات في المدرسة."
+    ]},
+    { label:"الأمن والسلامة (متابعة الأسبوع الأول)", items:[
+      "متابعة طفايات الحريق.",
+      "متابعة الخزانات.",
+      "الإنارة والتهوية.",
+      "الأدوات والتجهيزات والوسائل المختلفة.",
+      "متابعة توفير التجهيزات المختلفة لغرف الدراسة."
+    ]},
+    { label:"التنفيذ", items:[
+      "التنفيذ في ضوء الاستعدادات والمهارات الخاصة بكل معلمة.",
+      "متابعة ما يُنفَّذ من الأعمال أولًا بأول.",
+      "التنفيذ وفق الجدول الزمني المدرسي.",
+      "التنفيذ حسب ميزانية المدرسة بالنسبة لبعض الطلبات.",
+      "أن تضع كل معلمة خطة لأنشطة اليوم الأول والثاني (تعارف، مناقشة القوانين الصفية، تقديم متطلبات المادة، أنشطة أولية) وتثبيتها في السجل، مع بدء العطاء الفعلي من الحصة الثانية أيًا كان عدد الحضور.",
+      "متابعة حضور الطالبات منذ اليوم الأول: حصر الغياب أولًا بأول، وتطبيق إجراءات الغياب وفق اللائحة دون تهاون، وعدم دمج الفصول عند قلة الحضور، وعدم إعادة شرح الدروس لاحقًا، وتوعية الطالبات وأولياء الأمور بأهمية الحضور اليومي، وتشجيع المنتظمات بالحضور عبر هدايا رمزية وشهادات تقدير وإذاعة أسمائهن في الطابور الصباحي."
+    ]}
+  ]
+};
+
+const CH_COMMITTEES = {
+  key:"committees", title:"اللجان المدرسية",
+  short:"اللجان",
+  sub:"اللجان الفرعية المنظمة للعمل المدرسي، وأعضاء كل لجنة",
+  color:"rust",
+  checklist:[
+    "لجنة جداول المدرسة",
+    "لجنة تنظيم دوام اليوم الأول من الدراسة",
+    "لجنة الإذاعة المدرسية",
+    "لجنة الكتب المدرسية",
+    "لجنة متابعة تجهيز المقصف المدرسي",
+    "لجنة البيئة المدرسية",
+    "لجنة البيئة الصفية",
+    "لجنة التسجيل والقبول واستكمال تسجيل المستجدات"
+  ],
+  committees:[
+    {
+      name:"لجنة تنظيم اليوم الأول من الدراسة",
+      desc:"تنظيم اليوم الأول ومتابعة قرع الجرس في الوقت المحدد، وتنظيم الطابور الصباحي والإذاعة المدرسية من قِبل المعلمات، وتنظيم دخول الطالبات من قِبل رائدات الفصول، والتأكد من الالتزام بمواعيد استلام الكتب واستلام جميع الطالبات لها.",
+      members:[
+        {name:"مي أحمد خراز", role:"مديرة المدرسة"},
+        {name:"أريج إبراهيم العجلان", role:"مساعد إداري"},
+        {name:"بدرية سعد البلادي", role:"مساعد إداري"},
+        {name:"نهلا حمدان البلادي", role:"مساعد إداري"},
+        {name:"عائشة مبارك السهلي", role:"مساعد إداري"},
+        {name:"فاطمة شريد الحربي", role:"مساعد إداري"},
+        {name:"نورة علي العنزي", role:"مساعد إداري"},
+        {name:"وسام صالح السحيمي", role:"مساعد إداري"}
+      ]
+    },
+    {
+      name:"لجنة البيئة المدرسية والبيئة الصفية",
+      desc:"العناية بالنظافة العامة، والتأكد من جاهزية المرافق (المصلى، غرفة الاجتماعات، غرف المعلمات، الإضاءة، دورات المياه، الحاويات، اللوحات التوجيهية) لاستقبال الطالبات بشكل مريح ولائق منذ اليوم الأول، مع العناية بالممرات وطفايات الحريق، والتأكد من جاهزية الفصل (السبورة، الإضاءة، التكييف، المقاعد، النظافة)، وإعداد قوائم توزيع الطالبات على الفصول وفق الفروق الفردية بشكل عادل ومتساوٍ.",
+      members:[
+        {name:"مي أحمد خراز", role:"مديرة المدرسة"},
+        {name:"أريج إبراهيم العجلان", role:"مساعد إداري"},
+        {name:"بدرية سعد البلادي", role:"مساعد إداري"},
+        {name:"نهلا حمدان البلادي", role:"مساعد إداري"},
+        {name:"عائشة مبارك السهلي", role:"مساعد إداري"},
+        {name:"فاطمة شريد الحربي", role:"مساعد إداري"},
+        {name:"نورة علي العنزي", role:"مساعد إداري"},
+        {name:"وسام صالح السحيمي", role:"مساعد إداري"}
+      ]
+    },
+    {
+      name:"لجنة الجدول المدرسي",
+      desc:"توزيع المقررات على المعلمات ومقارنة الملاك بالموجود من المعلمات في جميع التخصصات، وحصر العجز والزيادة والتسديد للمدرسة قبل مباشرة الطالبات من خلال الندب، وإعداد الجدول المدرسي وجدول الاحتياط وجدول المناوبة والإشراف اليومي، وتوزيع رائدات الفصول لضمان عدم تعطل سير الدراسة منذ اليوم الأول.",
+      members:[
+        {name:"مي أحمد خراز", role:"مديرة المدرسة"}
+      ]
+    },
+    {
+      name:"لجنة المستودعات والكتب",
+      desc:"تجهيز الكتب وتنظيمها، والتأكد من اكتمال أعدادها لجميع الطالبات وصلاحيتها وطباعتها، ومخاطبة الجهة المختصة عند وجود نقص لتسديده قبل مباشرة الطالبات، وتحديد طريقة استلام الطالبات للكتب، وإعداد قوائم الاستلام وأسماء المعلمات المكلفات بتسليم كل صف، وتحديد مواعيد ومكان الاستلام.",
+      members:[
+        {name:"مي أحمد خراز", role:"مديرة المدرسة"},
+        {name:"نورة علي العنزي", role:"مساعد إداري"},
+        {name:"نهلا حمدان البلادي", role:"مساعد إداري"},
+        {name:"عائشة مبارك السهلي", role:"مساعد إداري"}
+      ]
+    },
+    {
+      name:"لجنة متابعة المقصف المدرسي",
+      desc:"متابعة تنفيذ المقصف المدرسي من قِبل الشركة الممولة، وتأمين احتياجات الطالبات منذ اليوم الأول.",
+      members:[
+        {name:"مي أحمد خراز", role:"مديرة المدرسة"},
+        {name:"ترفة العنزي", role:"موجهة صحية"}
+      ]
+    },
+    {
+      name:"لجنة التسجيل والقبول واستكمال تسجيل المستجدات",
+      desc:"استكمال إجراءات القبول والتسجيل وتسجيل الطالبات المستجدات وفق الضوابط المنظمة.",
+      members:[
+        {name:"مي أحمد خراز", role:"مديرة المدرسة"},
+        {name:"عزيزة الحسيني", role:"الموجهة الطلابية"},
+        {name:"وسام السحيمي", role:"مساعد إداري"}
+      ]
+    }
+  ]
+};
+
+const PAGES = [
+  {type:"cover", key:"cover", short:"الغلاف", color:"pine"},
+  {type:"toc", key:"toc", short:"الفهرس", color:"pine"},
+  {type:"list", data:CH_PRE},
+  {type:"grouped", data:CH_WEEK1},
+  {type:"grouped", data:CH_PRIORITIES},
+  {type:"committees", data:CH_COMMITTEES}
+];
+
+/* ============ ICONS ============ */
+const ICON_CHECK = `<svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg>`;
+
+/* ============ RENDER ============ */
+let current = 0;
+
+function initials(name){
+  const p = name.replace("أ/","").trim().split(" ");
+  return (p[0]?.[0]||"") + (p[1]?.[0]||"");
+}
+
+function renderCover(){
+  return `
+  <div class="cover">
+    <div class="cover-top">
+      <span class="cover-badge">📘 الحقيبة التفاعلية لأدلة العمل المدرسي</span>
+      <h1 class="cover-title">دليل الاستعداد لاستقبال<br>العام الدراسي الجديد</h1>
+      <p class="cover-sub">خطة تنفيذية شاملة لمهام فترة الاستعداد، وأولويات التهيئة والاستقبال، واللجان المدرسية المنظمة للعمل.</p>
+      <div class="cover-school">${SCHOOL.name}</div>
+      <div class="cover-year">العام الدراسي ${SCHOOL.year}</div>
+    </div>
+
+    <div class="cover-stats">
+      <div class="stat"><b>${SCHOOL.students}</b><span>عدد الطالبات</span></div>
+      <div class="stat"><b>${SCHOOL.teachers}</b><span>عدد المعلمات</span></div>
+      <div class="stat"><b>${SCHOOL.admins}</b><span>عدد الإداريات</span></div>
+    </div>
+
+    <div class="cover-info">
+      <div class="info-grid">
+        <div class="info-row"><span class="k">الإدارة التعليمية</span><span class="v">${SCHOOL.admin}</span></div>
+        <div class="info-row"><span class="k">الرقم الوزاري</span><span class="v ltr">${SCHOOL.ministryNo}</span></div>
+        <div class="info-row"><span class="k">مديرة المدرسة</span><span class="v">${SCHOOL.principal}</span></div>
+        <div class="info-row"><span class="k">جوال المديرة</span><span class="v ltr">${SCHOOL.principalPhone}</span></div>
+        <div class="info-row"><span class="k">البريد الرسمي</span><span class="v ltr">${SCHOOL.email}</span></div>
+        <div class="info-row"><span class="k">رقم هوية المديرة</span><span class="v ltr">${SCHOOL.principalId}</span></div>
+      </div>
+      <div class="cover-credit">تنفيذ: <b>${SCHOOL.preparedBy}</b> — ${SCHOOL.preparedByRole}</div>
+    </div>
+  </div>`;
+}
+
+function renderTOC(){
+  const chapters = PAGES.filter(p=>p.type!=="cover" && p.type!=="toc");
+  let rows = chapters.map((p,i)=>{
+    const c = COLORS[p.data.color];
+    const idx = PAGES.indexOf(p);
+    const count = p.type==="list" ? p.data.items.length
+                : p.type==="grouped" ? p.data.groups.reduce((a,g)=>a+g.items.length,0)
+                : p.data.checklist.length + p.data.committees.length;
+    return `<div class="toc-item" onclick="jump(${idx})">
+      <div class="n" style="background:${c.main}">${i+1}</div>
+      <div class="t"><b>${p.data.title}</b><span>${count} بندًا</span></div>
+      <span class="arrow">‹</span>
+    </div>`;
+  }).join("");
+  return `
+  <div class="page">
+    <span class="kicker" style="background:${COLORS.pine.soft};color:${COLORS.pine.main}">فهرس الدليل</span>
+    <h2 class="ctitle">محتويات الدليل</h2>
+    <p class="csub">تنقّلي بين فصول الدليل من هنا، أو استخدمي أزرار "السابق / التالي" أدناه، أو شريط التبويبات أعلى الصفحة.</p>
+    <div class="toc-list">${rows}</div>
+  </div>`;
+}
+
+function renderList(ch){
+  const c = COLORS[ch.color];
+  const rows = ch.items.map((t,i)=>`
+    <li class="item">
+      <span class="num" style="background:${c.main}">${i+1}</span>
+      <span>${t}</span>
+    </li>`).join("");
+  return `
+  <div class="page">
+    <span class="kicker" style="background:${c.soft};color:${c.main}">${ch.items.length} مهمة — منفّذة بالكامل</span>
+    <h2 class="ctitle">${ch.title}</h2>
+    <p class="csub">${ch.sub}</p>
+    <ul class="items">${rows}</ul>
+  </div>`;
+}
+
+function renderGrouped(ch){
+  const c = COLORS[ch.color];
+  const groups = ch.groups.map(g=>{
+    const items = g.items.map(t=>`
+      <li class="item">
+        <span class="chk">${ICON_CHECK}</span>
+        <span>${t}</span>
+      </li>`).join("");
+    return `
+    <div class="group">
+      <div class="grouphead">
+        <span class="bar" style="background:${c.main}"></span>
+        <h3>${g.label}</h3>
+        <span class="count">${g.items.length}</span>
+      </div>
+      <ul class="items">${items}</ul>
+    </div>`;
+  }).join("<hr class='rule'>");
+  const total = ch.groups.reduce((a,g)=>a+g.items.length,0);
+  return `
+  <div class="page">
+    <span class="kicker" style="background:${c.soft};color:${c.main}">${total} مهمة عبر ${ch.groups.length} مجالات</span>
+    <h2 class="ctitle">${ch.title}</h2>
+    <p class="csub">${ch.sub}</p>
+    ${groups}
+  </div>`;
+}
+
+function renderCommittees(ch){
+  const c = COLORS[ch.color];
+  const check = ch.checklist.map(t=>`
+    <li class="item">
+      <span class="chk">${ICON_CHECK}</span>
+      <span>${t}</span>
+    </li>`).join("");
+  const cards = ch.committees.map(cm=>`
+    <div class="ccard">
+      <div class="chead"><h4>${cm.name}</h4></div>
+      <div class="cbody">
+        <p class="cdesc">${cm.desc}</p>
+        <div class="members">
+          ${cm.members.map(m=>`
+            <div class="member">
+              <span class="av">${initials(m.name)}</span>
+              <span><b>${m.name}</b> <span class="role">— ${m.role}</span></span>
+            </div>`).join("")}
+        </div>
+      </div>
+    </div>`).join("");
+  return `
+  <div class="page">
+    <span class="kicker" style="background:${c.soft};color:${c.main}">${ch.committees.length} لجان تفصيلية</span>
+    <h2 class="ctitle">${ch.title}</h2>
+    <p class="csub">${ch.sub}</p>
+
+    <div class="group">
+      <div class="grouphead">
+        <span class="bar" style="background:${c.main}"></span>
+        <h3>اللجان الفرعية المنظمة للمدرسة</h3>
+        <span class="count">${ch.checklist.length}</span>
+      </div>
+      <ul class="items">${check}</ul>
+    </div>
+
+    <hr class="rule">
+    <div class="cwrap">${cards}</div>
+  </div>`;
+}
+
+function renderPage(i){
+  const p = PAGES[i];
+  if(p.type==="cover") return renderCover();
+  if(p.type==="toc") return renderTOC();
+  if(p.type==="list") return renderList(p.data);
+  if(p.type==="grouped") return renderGrouped(p.data);
+  if(p.type==="committees") return renderCommittees(p.data);
+}
+
+function pageMeta(i){
+  const p = PAGES[i];
+  if(p.type==="cover") return {title:"الغلاف", color:"pine"};
+  if(p.type==="toc") return {title:"الفهرس", color:"pine"};
+  return {title:p.data.short, color:p.data.color};
+}
+
+function buildTabs(){
+  const strip = document.getElementById("tabstrip");
+  strip.innerHTML = PAGES.map((p,i)=>{
+    const m = pageMeta(i);
+    const c = COLORS[m.color];
+    return `<button class="tab" id="tab-${i}" style="--c:${c.main}" onclick="jump(${i})">
+      <span class="dot" style="background:${c.main}"></span>${m.title}
+    </button>`;
+  }).join("");
+}
+
+function updateTabs(){
+  PAGES.forEach((_,i)=>{
+    const el = document.getElementById(`tab-${i}`);
+    const m = pageMeta(i);
+    const c = COLORS[m.color];
+    if(i===current){
+      el.classList.add("active");
+      el.style.background = c.main;
+    }else{
+      el.classList.remove("active");
+      el.style.background = "";
+    }
+  });
+  const active = document.getElementById(`tab-${current}`);
+  if(active) active.scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
+}
+
+function buildDrawer(){
+  const list = document.getElementById("drawerList");
+  list.innerHTML = PAGES.map((p,i)=>{
+    const m = pageMeta(i);
+    const c = COLORS[m.color];
+    return `<div class="toc-item" onclick="jump(${i});closeDrawer();">
+      <div class="n" style="background:${c.main}">${i+1}</div>
+      <div class="t"><b>${m.title}</b></div>
+      <span class="arrow">‹</span>
+    </div>`;
+  }).join("");
+}
+
+function render(){
+  document.getElementById("pageContent").innerHTML = renderPage(current);
+  document.getElementById("pageinfo").textContent = `صفحة ${current+1} من ${PAGES.length}`;
+  document.getElementById("prevBtn").disabled = current===0;
+  document.getElementById("nextBtn").disabled = current===PAGES.length-1;
+  updateTabs();
+  document.querySelector(".book").scrollTop = 0;
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function go(dir){
+  const n = current + dir;
+  if(n<0 || n>=PAGES.length) return;
+  current = n;
+  render();
+}
+function jump(i){ current = i; render(); }
+
+function openDrawer(){
+  document.getElementById("drawer").classList.add("show");
+  document.getElementById("overlay").classList.add("show");
+}
+function closeDrawer(){
+  document.getElementById("drawer").classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
+}
+
+/* swipe */
+let touchX=null;
+document.addEventListener("touchstart",e=>{touchX=e.touches[0].clientX;});
+document.addEventListener("touchend",e=>{
+  if(touchX===null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if(Math.abs(dx)>60){ dx<0 ? go(1) : go(-1); }
+  touchX=null;
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="ArrowLeft") go(1);
+  if(e.key==="ArrowRight") go(-1);
+});
+
+buildTabs();
+buildDrawer();
+render();
+</script>
+</body>
+</html>
